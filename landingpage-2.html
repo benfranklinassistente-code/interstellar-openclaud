@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteja Sua Família - Escudo 60+</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        .headline {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subheadline {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2d1b2e 0%, #1a1a2e 100%);
+            cursor: pointer;
+        }
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .play-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 25px solid #f5576c;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+        .video-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            .headline { font-size: 1.6rem; }
+            .subheadline { font-size: 1rem; }
+            .play-button { width: 60px; height: 60px; }
+            .play-button::after {
+                border-left: 20px solid #f5576c;
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="headline">💔 Seu Neto Ligou Pedindo Dinheiro? Verifique Antes!</h1>
+        <p class="subheadline">Proteja sua família e seu legado em 3 aulas simples — sem complicação técnica</p>
+        
+        <div class="video-container">
+            <div class="video-placeholder" onclick="alert('Coloque aqui seu vídeo VSL')">
+                <div class="play-button"></div>
+                <span class="video-text">▶ Clique para assistir</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
